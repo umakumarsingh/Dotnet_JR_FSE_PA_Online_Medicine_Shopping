@@ -24,9 +24,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public IList<Category> CatList()
         {
-            var catlist = _mediRepository.CatList();
-            return catlist;
-            //throw new NotImplementedException();
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get list of doctor and show on dropdownlist while appointment booking with doctor
@@ -34,8 +33,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public IEnumerable<Doctor> Doctor()
         {
-            var doctor = _mediRepository.Doctor();
-            return doctor;
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Book a doctor appointment and save data in appointment Table
@@ -44,8 +43,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public async Task<Appointment> DoctorAppointment(Appointment appointment)
         {
-            var appoint = await _mediRepository.DoctorAppointment(appointment);
-            return appoint;
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all doctor list from InMemoryDb and show doctor list
@@ -53,9 +52,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public async Task<IEnumerable<Doctor>> GetAllDoctor()
         {
-            var doctor = await _mediRepository.GetAllDoctor();
-            return doctor;
-            //throw new NotImplementedException();
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all medicine and show on web home page for shoppers, and show medicine with medicine category id
@@ -64,8 +62,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public async Task<IEnumerable<Medicine>> GetAllMedicine(int? id)
         {
-            var medi = await _mediRepository.GetAllMedicine(id);
-            return medi;
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get appointment details for user
@@ -74,8 +72,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public async Task<Appointment> GetAppointmentById(int appointmentId)
         {
-            var appointment = await _mediRepository.GetAppointmentById(appointmentId);
-            return appointment;
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get medicine by Medicine Id from InMemoryDb
@@ -84,8 +82,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public async Task<Medicine> GetMedicineById(int medicineId)
         {
-            var medi = await _mediRepository.GetMedicineById(medicineId);
-            return medi;
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get medicine by name
@@ -94,8 +92,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public async Task<IEnumerable<Medicine>> MedicineByName(string name)
         {
-            var mediname = await _mediRepository.MedicineByName(name);
-            return mediname;
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get order infromation of medicine order
@@ -104,8 +102,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public Task<IEnumerable<MedicineOrder>> OrderByuserId(int UserId)
         {
-            var order = _mediRepository.OrderByuserId(UserId);
-            return order;
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Place medicine order and save user address as well
@@ -115,8 +113,8 @@ namespace OnlineMedicineShopping.BusinessLayer.Services
         /// <returns></returns>
         public async Task<ApplicationUser> PlaceOrder(int medicineId, ApplicationUser user)
         {
-            var placeorder = await _mediRepository.PlaceOrder(medicineId, user);
-            return placeorder;
+            //Do code here
+            throw new NotImplementedException();
         }
     }
 }

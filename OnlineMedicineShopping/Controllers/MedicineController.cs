@@ -30,26 +30,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int? id, string search, int page = 1)
         {
-            if (search != null)
-            {
-                var intView = new MedicineViewModel
-                {
-                    MedicinePerPage = 5,
-                    Medicines = await _medicineServices.MedicineByName(search),
-                    CurrentPage = page
-                };
-                return View(intView);
-            }
-            else
-            {
-                var intView = new MedicineViewModel
-                {
-                    MedicinePerPage = 5,
-                    Medicines = await _medicineServices.GetAllMedicine(id),
-                    CurrentPage = page
-                };
-                return View(intView);
-            }
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get Medicine Details after click ondetails link
@@ -59,8 +41,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int MedicineId)
         {
-            var medicine = await _medicineServices.GetMedicineById(MedicineId);
-            return View(medicine);
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Place order for new medicine get method
@@ -80,23 +62,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpPost]
         public async Task<IActionResult> Placeorder(int MedicineId, ApplicationUser user)
         {
-            if (ModelState.IsValid)
-            {
-                ApplicationUser users = new ApplicationUser
-                {
-                    Name = user.Name,
-                    Email = user.Email,
-                    MobileNumber = user.MobileNumber,
-                    PinCode = user.PinCode,
-                    HouseNo_Building_Name = user.HouseNo_Building_Name,
-                    Road_area = user.Road_area,
-                    City = user.City,
-                    State = user.State
-                };
-                var result = await _medicineServices.PlaceOrder(MedicineId, users);
-                return RedirectToAction("OrderInfo", "Medicine", new { userId = result.UserId });
-            }
-            return View();
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Used for show order info
@@ -105,8 +72,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpGet]
         public async Task<IActionResult> OrderInfo(int userId)
         {
-            var order = await _medicineServices.OrderByuserId(userId);
-            return View(order);
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Book a doctor appointment
@@ -115,11 +82,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpGet]
         public IActionResult DoctorAppointment()
         {
-            var viewModel = new AppointmentViewModel
-            {
-                Doctors = _medicineServices.Doctor()
-            };
-            return View(viewModel);
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Book a doctor appointment
@@ -129,22 +93,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpPost]
         public async Task<IActionResult> DoctorAppointment(AppointmentViewModel appointment)
         {
-            if (ModelState.IsValid)
-            {
-                Appointment patient = new Appointment
-                {
-                    PatientName = appointment.PatientName,
-                    DoctorName = appointment.DoctorName,
-                    Takendate = appointment.Takendate,
-                    Symtoms = appointment.Symtoms,
-                    PatientAge = appointment.PatientAge,
-                    Remark = appointment.Remark
-                };
-                await _medicineServices.DoctorAppointment(patient);
-                ViewBag.DoctorId = new SelectList(_medicineServices.Doctor(), "DoctorId", "Name", appointment.DoctorId);
-                return RedirectToAction("AppointmentInfo", "Medicine", new { AppointmentId = patient.AppointmentId });
-            }
-            return View();
+            //Do code here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Show appointment setails after appointment booking is complete
@@ -154,8 +104,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpGet]
         public async Task<IActionResult> AppointmentInfo(int appointmentId)
         {
-            var appointment = await _medicineServices.GetAppointmentById(appointmentId);
-            return View(appointment);
+            //Do code here
+            throw new NotImplementedException();
         }
     }
 }

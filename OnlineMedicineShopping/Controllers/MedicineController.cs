@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineMedicineShopping.BusinessLayer.Interfaces;
 using OnlineMedicineShopping.BusinessLayer.ViewModels;
 using OnlineMedicineShopping.Entities;
@@ -72,8 +69,8 @@ namespace OnlineMedicineShopping.Controllers
         [HttpGet]
         public async Task<IActionResult> OrderInfo(int userId)
         {
-            //Do code here
-            throw new NotImplementedException();
+            var order = await _medicineServices.OrderByuserId(userId);
+            return View(order);
         }
         /// <summary>
         /// Book a doctor appointment

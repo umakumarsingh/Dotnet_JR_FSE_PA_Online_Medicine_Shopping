@@ -4,11 +4,10 @@ using OnlineMedicineShopping.BusinessLayer.Services;
 using OnlineMedicineShopping.BusinessLayer.Services.Repository;
 using OnlineMedicineShopping.Entities;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace OnlineMedicineShopping.Test.TestCases
 {
@@ -17,6 +16,7 @@ namespace OnlineMedicineShopping.Test.TestCases
         /// <summary>
         /// Creating Referance Variable of Service Interface and Mocking Repository Interface and class
         /// </summary>
+        private readonly ITestOutputHelper _output;
         private readonly IMedicineServices _medicineServices;
         public readonly Mock<IMedicineRepository> service = new Mock<IMedicineRepository>();
         private readonly Medicine _medicine;
@@ -25,9 +25,10 @@ namespace OnlineMedicineShopping.Test.TestCases
         private readonly MedicineOrder _order;
         private readonly Appointment _appointment;
         private readonly Doctor _doctor;
-        public FuctionalTests()
+        public FuctionalTests(ITestOutputHelper output)
         {
             //Creating New mock Object with value.
+            _output = output;
             _medicineServices = new MedicineServices(service.Object);
             _medicine = new Medicine
             {
@@ -113,15 +114,36 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_user);
-            var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_user);
+                var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
+                if (result != null)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_Validate_ValidPlaceOrder=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_Validate_ValidPlaceOrder=" + res + "\n");
             return res;
         }
@@ -134,16 +156,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.GetAllMedicine(_medicine.MedicineId));
-            var result = await _medicineServices.GetAllMedicine(_medicine.MedicineId);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.GetAllMedicine(_medicine.MedicineId));
+                var result = await _medicineServices.GetAllMedicine(_medicine.MedicineId);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllMedicine=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllMedicine=" + res + "\n");
             return res;
         }
@@ -156,16 +199,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.GetMedicineById(_medicine.MedicineId)).ReturnsAsync(_medicine);
-            var result = await _medicineServices.GetMedicineById(_medicine.MedicineId);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.GetMedicineById(_medicine.MedicineId)).ReturnsAsync(_medicine);
+                var result = await _medicineServices.GetMedicineById(_medicine.MedicineId);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetMedicineById=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetMedicineById=" + res + "\n");
             return res;
         }
@@ -178,16 +242,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.MedicineByName(_medicine.Name));
-            var result = await _medicineServices.MedicineByName(_medicine.Name);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.MedicineByName(_medicine.Name));
+                var result = await _medicineServices.MedicineByName(_medicine.Name);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch (Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetMedicineName=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetMedicineName=" + res + "\n");
             return res;
         }
@@ -200,16 +285,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.OrderByuserId(_user.UserId));
-            var result = await _medicineServices.OrderByuserId(_user.UserId);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.OrderByuserId(_user.UserId));
+                var result = await _medicineServices.OrderByuserId(_user.UserId);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetOrderById=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetOrderById=" + res + "\n");
             return res;
         }
@@ -222,15 +328,36 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            service.Setup(repo => repo.DoctorAppointment(_appointment)).ReturnsAsync(_appointment);
-            var result = await _medicineServices.DoctorAppointment(_appointment);
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.DoctorAppointment(_appointment)).ReturnsAsync(_appointment);
+                var result = await _medicineServices.DoctorAppointment(_appointment);
+                if (result != null)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_Validate_ValidAppointment=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_Validate_ValidAppointment=" + res + "\n");
             return res;
         }
@@ -243,16 +370,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.GetAppointmentById(_appointment.AppointmentId)).ReturnsAsync(_appointment);
-            var result = await _medicineServices.GetAppointmentById(_appointment.AppointmentId);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.GetAppointmentById(_appointment.AppointmentId)).ReturnsAsync(_appointment);
+                var result = await _medicineServices.GetAppointmentById(_appointment.AppointmentId);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAppointmentById=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAppointmentById=" + res + "\n");
             return res;
         }
@@ -265,16 +413,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.GetAllDoctor());
-            var result = await _medicineServices.GetAllDoctor();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.GetAllDoctor());
+                var result = await _medicineServices.GetAllDoctor();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllDoctor=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllDoctor=" + res + "\n");
             return res;
         }
@@ -287,16 +456,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.CatList());
-            var result = _medicineServices.CatList();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.CatList());
+                var result = _medicineServices.CatList();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetCategoryList=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetCategoryList=" + res + "\n");
             return res;
         }
@@ -309,16 +499,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.Doctor());
-            var result = _medicineServices.Doctor();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.Doctor());
+                var result = _medicineServices.Doctor();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetDoctorList=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetDoctorList=" + res + "\n");
             return res;
         }

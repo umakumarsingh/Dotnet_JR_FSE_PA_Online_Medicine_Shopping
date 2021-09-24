@@ -4,12 +4,11 @@ using OnlineMedicineShopping.BusinessLayer.Services;
 using OnlineMedicineShopping.BusinessLayer.Services.Repository;
 using OnlineMedicineShopping.Entities;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace OnlineMedicineShopping.Test.TestCases
 {
@@ -18,6 +17,7 @@ namespace OnlineMedicineShopping.Test.TestCases
         /// <summary>
         /// Creating Referance Variable of Service Interface and Mocking Repository Interface and class
         /// </summary>
+        private readonly ITestOutputHelper _output;
         private readonly IMedicineServices _medicineServices;
         public readonly Mock<IMedicineRepository> service = new Mock<IMedicineRepository>();
         private readonly Medicine _medicine;
@@ -26,9 +26,10 @@ namespace OnlineMedicineShopping.Test.TestCases
         private readonly MedicineOrder _order;
         private readonly Appointment _appointment;
         private readonly Doctor _doctor;
-        public BoundaryTest()
+        public BoundaryTest(ITestOutputHelper output)
         {
             //Creating New mock Object with value.
+            _output = output;
             _medicineServices = new MedicineServices(service.Object);
             _medicine = new Medicine
             {
@@ -114,15 +115,36 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_user);
-            var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
-            if (result.UserId == _user.UserId)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_user);
+                var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
+                if (result.UserId == _user.UserId)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateOrderId=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateOrderId=" + res + "\n");
             return res;
         }
@@ -135,15 +157,36 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            service.Setup(repo => repo.DoctorAppointment(_appointment)).ReturnsAsync(_appointment);
-            var result = await _medicineServices.DoctorAppointment(_appointment);
-            if (result.AppointmentId == _appointment.AppointmentId)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.DoctorAppointment(_appointment)).ReturnsAsync(_appointment);
+                var result = await _medicineServices.DoctorAppointment(_appointment);
+                if (result.AppointmentId == _appointment.AppointmentId)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateAppointmentId=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateAppointmentId=" + res + "\n");
             return res;
         }
@@ -156,16 +199,37 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_user);
-            var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
-            var actualLength = _user.MobileNumber.ToString().Length;
-            if (result.MobileNumber.ToString().Length == actualLength)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_user);
+                var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
+                var actualLength = _user.MobileNumber.ToString().Length;
+                if (result.MobileNumber.ToString().Length == actualLength)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateMobileNumber=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateMobileNumber=" + res + "\n");
             return res;
         }
@@ -173,17 +237,40 @@ namespace OnlineMedicineShopping.Test.TestCases
         /// Testfor_ValidEmail used for test the valid Email
         /// </summary>
         [Fact]
-        public async void Testfor_ValidEmail()
+        public async Task<bool> Testfor_ValidEmail()
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            bool isEmail = Regex.IsMatch(_user.Email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+            try
+            {
+                bool isEmail = Regex.IsMatch(_user.Email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+                //Assert
+                Assert.True(isEmail);
+                res = isEmail;
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidEmail=" + res + "\n");
+                return false;
+            }
             //Assert
-            Assert.True(isEmail);
-            res = isEmail;
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidEmail=" + res + "\n");
+            return res;
         }
     }
 }

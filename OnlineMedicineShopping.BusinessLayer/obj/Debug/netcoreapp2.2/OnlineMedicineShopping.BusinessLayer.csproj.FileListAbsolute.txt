@@ -12,17 +12,47 @@ D:\IIHT\Task-10\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcorea
 D:\IIHT\Task-10\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CopyComplete
 D:\IIHT\Task-10\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
 D:\IIHT\Task-10\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.deps.json
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.dll
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.dll
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.pdb
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.pdb
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csprojAssemblyReference.cache
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfoInputs.cache
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfo.cs
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CoreCompileInputs.cache
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CopyComplete
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
-C:\Users\KUMARUMA\Documents\GitHub\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.deps.json
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.dll
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.dll
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.pdb
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.pdb
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csprojAssemblyReference.cache
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfoInputs.cache
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfo.cs
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CopyComplete
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
+D:\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.deps.json
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.dll
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.dll
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.pdb
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.pdb
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.AssemblyReference.cache
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfoInputs.cache
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfo.cs
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CopyComplete
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
+D:\IIHT DATA\IIHT\Task-10\InMemory\Medicine\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.deps.json
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.dll
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.dll
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.DataLayer.pdb
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\bin\Debug\netcoreapp2.2\OnlineMedicineShopping.Entities.pdb
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.AssemblyReference.cache
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfoInputs.cache
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.AssemblyInfo.cs
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.csproj.CopyComplete
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.dll
+D:\IIHT DATA\InMemory Artifacts_3.0\OnlineMedicine_CleanCode\OnlineMedicineShopping.BusinessLayer\obj\Debug\netcoreapp2.2\OnlineMedicineShopping.BusinessLayer.pdb

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj": {}
+    "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj": {
+    "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj",
+        "projectUniqueName": "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj",
         "projectName": "OnlineMedicineShopping.DataLayer",
-        "projectPath": "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj",
-        "packagesPath": "C:\\Users\\KUMARUMA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.DataLayer\\obj\\",
+        "projectPath": "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.DataLayer\\OnlineMedicineShopping.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\Uma Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\KUMARUMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uma Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,9 +29,10 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {
-              "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj": {
-                "projectPath": "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj"
+              "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj": {
+                "projectPath": "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj"
               }
             }
           }
@@ -44,6 +45,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -66,24 +68,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj": {
+    "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj",
+        "projectUniqueName": "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj",
         "projectName": "OnlineMedicineShopping.Entities",
-        "projectPath": "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj",
-        "packagesPath": "C:\\Users\\KUMARUMA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KUMARUMA\\Documents\\GitHub\\Dotnet_JR_FSE_PA_Online_Medicine_Shopping\\OnlineMedicineShopping.Entities\\obj\\",
+        "projectPath": "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.Entities\\OnlineMedicineShopping.Entities.csproj",
+        "packagesPath": "C:\\Users\\Uma Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\IIHT DATA\\InMemory Artifacts_3.0\\OnlineMedicine_CleanCode\\OnlineMedicineShopping.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\KUMARUMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uma Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,6 +97,7 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {}
           }
         },
@@ -106,6 +109,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -124,7 +128,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

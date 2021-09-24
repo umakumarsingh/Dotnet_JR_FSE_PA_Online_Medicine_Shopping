@@ -1,0 +1,10 @@
+Testfor_GetAllMedicine=False
+Testfor_GetAllDoctor=False
+Testfor_GetMedicineName=False
+Testfor_GetAppointmentById=False
+Testfor_GetOrderById=False
+Testfor_Validate_ValidAppointment=False
+Testfor_GetMedicineById=False
+Testfor_Validate_ValidPlaceOrder=False
+Testfor_GetDoctorList=False
+Testfor_GetCategoryList=False

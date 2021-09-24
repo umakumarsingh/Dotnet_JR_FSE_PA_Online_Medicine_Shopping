@@ -4,11 +4,10 @@ using OnlineMedicineShopping.BusinessLayer.Services;
 using OnlineMedicineShopping.BusinessLayer.Services.Repository;
 using OnlineMedicineShopping.Entities;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace OnlineMedicineShopping.Test.TestCases
 {
@@ -16,7 +15,8 @@ namespace OnlineMedicineShopping.Test.TestCases
     {
         /// <summary>
         /// Creating Referance Variable of Service Interface and Mocking Repository Interface and class
-        /// </summary>
+        /// </summary
+        private readonly ITestOutputHelper _output;
         private readonly IMedicineServices _medicineServices;
         public readonly Mock<IMedicineRepository> service = new Mock<IMedicineRepository>();
         private readonly Medicine _medicine;
@@ -25,9 +25,10 @@ namespace OnlineMedicineShopping.Test.TestCases
         private readonly MedicineOrder _order;
         private readonly Appointment _appointment;
         private readonly Doctor _doctor;
-        public ExceptionalTest()
+        public ExceptionalTest(ITestOutputHelper output)
         {
             //Creating New mock Object with value.
+            _output = output;
             _medicineServices = new MedicineServices(service.Object);
             _medicine = new Medicine
             {
@@ -113,6 +114,8 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             var _userApp = new ApplicationUser()
             {
                 UserId = 2,
@@ -127,14 +130,33 @@ namespace OnlineMedicineShopping.Test.TestCases
             };
             _userApp = null;
             //Act
-            service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_userApp = null);
-            var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
-            if (result == null)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.PlaceOrder(_medicine.MedicineId, _user)).ReturnsAsync(_userApp = null);
+                var result = await _medicineServices.PlaceOrder(_medicine.MedicineId, _user);
+                if (result == null)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_exception_revised.txt", "Testfor_Validate_InvlidPlaceOrder=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_exception_revised.txt", "Testfor_Validate_InvlidPlaceOrder=" + res + "\n");
             return res;
         }
@@ -147,6 +169,8 @@ namespace OnlineMedicineShopping.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             var appointment = new Appointment()
             {
                 AppointmentId = 1,
@@ -159,14 +183,33 @@ namespace OnlineMedicineShopping.Test.TestCases
             };
             appointment = null;
             //Act
-            service.Setup(repo => repo.DoctorAppointment(appointment)).ReturnsAsync(appointment = null);
-            var result = await _medicineServices.DoctorAppointment(appointment);
-            if (result == null)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.DoctorAppointment(appointment)).ReturnsAsync(appointment = null);
+                var result = await _medicineServices.DoctorAppointment(appointment);
+                if (result == null)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_exception_revised.txt", "Testfor_Validate_InvlidAppointmentbooking=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_exception_revised.txt", "Testfor_Validate_InvlidAppointmentbooking=" + res + "\n");
             return res;
         }

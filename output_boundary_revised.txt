@@ -1,0 +1,4 @@
+Testfor_ValidateMobileNumber=False
+Testfor_ValidateOrderId=False
+Testfor_ValidEmail=True
+Testfor_ValidateAppointmentId=False
